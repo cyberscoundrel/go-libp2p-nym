@@ -3,7 +3,7 @@ package queue
 import (
 	"testing"
 
-	"nymtrans/go-libp2p-nym/message"
+	"banyan/transports/nym/message"
 )
 
 func createTestMessage(nonce uint64, data []byte) message.TransportMessage {

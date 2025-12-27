@@ -1,0 +1,43 @@
+{
+  "name": "transport-nym",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "packages/transports/nym",
+  "tags": ["type:lib", "lang:go", "transport"],
+  "namedInputs": {
+    "go": ["{projectRoot}/**/*.go", "{projectRoot}/go.mod", "{projectRoot}/go.sum"]
+  },
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "inputs": ["go"],
+      "options": {
+        "cwd": "packages/transports/nym",
+        "command": "go build ./..."
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "inputs": ["go"],
+      "options": {
+        "cwd": "packages/transports/nym",
+        "command": "go test ./..."
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "inputs": ["go"],
+      "options": {
+        "cwd": "packages/transports/nym",
+        "command": "go vet ./..."
+      }
+    },
+    "tidy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/transports/nym",
+        "command": "go mod tidy"
+      }
+    }
+  }
+}

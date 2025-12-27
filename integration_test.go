@@ -23,7 +23,7 @@ import (
 	"github.com/libp2p/go-libp2p/p2p/net/swarm"
 	ma "github.com/multiformats/go-multiaddr"
 
-	nymtransport "nymtrans/go-libp2p-nym/transport"
+	nymtransport "banyan/transports/nym/transport"
 )
 
 const (

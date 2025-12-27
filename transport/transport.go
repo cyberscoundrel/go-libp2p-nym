@@ -13,9 +13,9 @@ import (
 	lptransport "github.com/libp2p/go-libp2p/core/transport"
 	ma "github.com/multiformats/go-multiaddr"
 
-	"nymtrans/go-libp2p-nym/message"
-	"nymtrans/go-libp2p-nym/mixnet"
-	"nymtrans/go-libp2p-nym/queue"
+	"banyan/transports/nym/message"
+	"banyan/transports/nym/mixnet"
+	"banyan/transports/nym/queue"
 )
 
 // Transport implements the go-libp2p transport interface over the Nym mixnet.

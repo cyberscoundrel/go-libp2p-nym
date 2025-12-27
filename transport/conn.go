@@ -12,8 +12,8 @@ import (
 	lptransport "github.com/libp2p/go-libp2p/core/transport"
 	ma "github.com/multiformats/go-multiaddr"
 
-	"nymtrans/go-libp2p-nym/message"
-	"nymtrans/go-libp2p-nym/queue"
+	"banyan/transports/nym/message"
+	"banyan/transports/nym/queue"
 )
 
 type Conn struct {
@@ -292,6 +292,16 @@ func (c *Conn) Close() error {
 
 func (c *Conn) IsClosed() bool {
 	return c.closed.Load()
+}
+
+func (c *Conn) CloseWithError(errCode network.ConnErrorCode) error {
+	// Nym mixnet doesn't support sending error codes, just close
+	return c.Close()
+}
+
+func (c *Conn) As(target any) bool {
+	// No wrapped connections
+	return false
 }
 
 func (c *Conn) sendControl(id message.SubstreamID, typ message.SubstreamMessageType) error {

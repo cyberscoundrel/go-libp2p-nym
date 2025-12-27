@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync"
 
-	"nymtrans/go-libp2p-nym/message"
-	"nymtrans/go-libp2p-nym/mixnet"
+	"banyan/transports/nym/message"
+	"banyan/transports/nym/mixnet"
 )
 
 // PipeNetwork creates two mixnet endpoints connected via in-memory channels.

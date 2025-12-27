@@ -10,8 +10,8 @@ import (
 	lptransport "github.com/libp2p/go-libp2p/core/transport"
 	ma "github.com/multiformats/go-multiaddr"
 
-	"nymtrans/go-libp2p-nym/internal/testutil"
-	"nymtrans/go-libp2p-nym/message"
+	"banyan/transports/nym/internal/testutil"
+	"banyan/transports/nym/message"
 )
 
 func TestTransportDialAndStream(t *testing.T) {

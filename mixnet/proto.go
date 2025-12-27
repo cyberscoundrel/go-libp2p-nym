@@ -6,7 +6,7 @@ import (
 	"errors"
 	"fmt"
 
-	"nymtrans/go-libp2p-nym/message"
+	"banyan/transports/nym/message"
 )
 
 const (

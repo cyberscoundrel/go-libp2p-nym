@@ -4,7 +4,7 @@ import (
 	"sort"
 	"sync"
 
-	"nymtrans/go-libp2p-nym/message"
+	"banyan/transports/nym/message"
 )
 
 // MessageQueue reorders transport messages by nonce for a connection.

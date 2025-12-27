@@ -9,7 +9,7 @@ import (
 
 	"github.com/libp2p/go-libp2p/core/network"
 
-	"nymtrans/go-libp2p-nym/message"
+	"banyan/transports/nym/message"
 )
 
 type Substream struct {
@@ -83,6 +83,11 @@ func (s *Substream) CloseRead() error {
 
 func (s *Substream) Reset() error {
 	return s.closeWithControl(true)
+}
+
+func (s *Substream) ResetWithError(errCode network.StreamErrorCode) error {
+	// Nym mixnet doesn't support sending error codes, just reset
+	return s.Reset()
 }
 
 func (s *Substream) SetDeadline(time.Time) error {

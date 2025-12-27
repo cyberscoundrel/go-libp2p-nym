@@ -7,7 +7,7 @@ import (
 
 	"github.com/gorilla/websocket"
 
-	"nymtrans/go-libp2p-nym/message"
+	"banyan/transports/nym/message"
 )
 
 // InboundMessage represents a message received from the mixnet which should be
